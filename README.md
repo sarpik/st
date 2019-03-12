@@ -28,7 +28,21 @@ The following additional bindings were added before I forked this:
 
 ## Installation for newbs
 
+* Clone via https
+
+```sh
+git clone https://github.com/LukeSmithxyz/st.git $HOME/.local/share/st
 ```
+
+* Or via ssh
+
+```sh
+git clone git@github.com:LukeSmithxyz/st.git $HOME/.local/share/st
+```
+
+* Build & install
+
+```sh
 make
 sudo make install
 ```
@@ -64,6 +78,17 @@ To be clear about the color settings:
 - But if `wal` has run in your session, its colors will take priority.
 
 Note that when you run `wal`, it will negate the transparency of existing windows, but new windows will continue with the previously defined transparency.
+
+## Modifying
+
+Modifications are done inside the config.h & other files (read more at [the official st website](https://st.suckless.org/))
+
+Once you modify the source, you'll need to re-build it:
+
+```sh
+make
+sudo make install
+```
 
 ## Contact
 
