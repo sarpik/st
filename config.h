@@ -203,6 +203,8 @@ MouseKey mkeys[] = {
 	{ Button5,              MODKEY,         kscrolldown,    {.i =  1} },
 	{ Button4,              MODKEY|ShiftMask,         zoom,      {.f =  +1} },
 	{ Button5,              MODKEY|ShiftMask,         zoom,    {.f =  -1} },
+	{ Button4,				XK_NO_MOD,		kscrollup,		{.i =  1} }, /* scroll with mouse without shift */
+	{ Button5,				XK_NO_MOD,		kscrolldown,	{.i =  1} }, /* scroll with mouse without shift */
 };
 
 static char *openurlcmd[] = { "/bin/sh", "-c",
@@ -236,8 +238,8 @@ static Shortcut shortcuts[] = {
 	{ MODKEY,  		XK_d,		kscrolldown,   	{.i = -1} },
 	{ MODKEY|ShiftMask,     XK_Up,          zoom,           {.f = +1} },
 	{ MODKEY|ShiftMask,     XK_Down,        zoom,           {.f = -1} },
-	{ MODKEY,		XK_m,           zoom,           {.f = +1} },
-	{ MODKEY,		XK_n,           zoom,           {.f = -1} },
+	{ MODKEY,		XK_m,		zoom,		{.f = +1} },
+	{ MODKEY,		XK_n,		zoom,		{.f = -1} },
 	{ MODKEY|ShiftMask,     XK_U,           zoom,           {.f = +2} },
 	{ MODKEY|ShiftMask,     XK_D,           zoom,           {.f = -2} },
     	{ MODKEY,		XK_l,		externalpipe,	{ .v = openurlcmd } },
