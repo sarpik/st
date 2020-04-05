@@ -5,14 +5,14 @@
 st.alpha: 0.86
 
 !! Set a default font and font size as below:
-st.font: Monospace-13;
-!*.font:	Liberation Mono:pixelsize=12:antialias=true:autohint=true;
+!st.font: Monospace-13;
+!*.font:	Liberation Mono:pixelsize=20:antialias=true:autohint=true;
 
 ! st.termname: st-256color
 ! st.borderpx: 2
 
 ### this makes st crash when emojis are seen ###
-!st.font: FuraCode Nerd Font Mono:pixelsize=20,style=Retina,Regular;
+st.font: FuraCode Nerd Font Mono:pixelsize=20,style=Retina,Regular;
 
 /* !! from the good'ol urxvt: */
 *.background: #282828
