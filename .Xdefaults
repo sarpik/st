@@ -12,7 +12,7 @@ st.alpha: 0.86
 ! st.borderpx: 2
 
 ### this makes st crash when emojis are seen ###
-st.font: FuraCode Nerd Font Mono:pixelsize=20,style=Retina,Regular;
+*.font: FuraCode Nerd Font Mono:pixelsize=20,style=Retina,Regular;
 
 /* !! from the good'ol urxvt: */
 *.background: #282828
