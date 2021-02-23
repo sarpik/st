@@ -502,25 +502,6 @@ bpress(XEvent *e)
 		return;
 	}
 
-	/** TODO BEGIN RM */
-	if (tisaltscr()) {
-		for (ms = mshortcuts; ms < mshortcuts + LEN(mshortcuts); ms++) {
-			if (e->xbutton.button == ms->b
-					&& match(ms->mask, e->xbutton.state)) {
-				ttywrite(ms->s, strlen(ms->s), 1);
-				return;
-			}
-		}
-	}
-
-	for (mk = mkeys; mk < mkeys + LEN(mkeys); mk++) {
-		if (e->xbutton.button == mk->b
-				&& match(mk->mask, e->xbutton.state)) {
-			mk->func(&mk->arg);
-			return;
-		}
-	}
-	/** TODO END RM */
 	if (mouseaction(e, 0))
 		return;
 
@@ -1635,9 +1616,6 @@ xdrawglyphfontspecs(const XftGlyphFontSpec *specs, Glyph base, int len, int x, i
 	r.width = width;
 	XftDrawSetClipRectangles(xw.draw, winx, winy, &r, 1);
 
-	/** TODO BEGIN (UN)RM 2 */
-	// XftDrawGlyphFontSpec(xw.draw, fg, specs, len);
-	/** TODO END (UN)RM 2 */
 	if (base.mode & ATTR_BOXDRAW) {
 		drawboxes(winx, winy, width / len, win.ch, fg, bg, specs, len);
 	} else {
